@@ -1,0 +1,26 @@
+html {
+	background-color: black;
+	height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+
+.squares {
+	display: flex;
+	flex-wrap: wrap;
+	width: 10%;
+	height: 10%;
+	background-color: #123444;
+	justify-content: center;
+}
+
+.squares div {
+/*	margin-top: 5%;
+	margin-bottom: 5%;*/
+	margin-left: 50%;
+	width: 80px;
+	height: 80px;
+}
