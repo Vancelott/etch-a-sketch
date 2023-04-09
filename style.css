@@ -1,4 +1,4 @@
-html {
+/* html {
 	background-color: black;
 	height: 100%;
 }
@@ -11,16 +11,17 @@ body {
 .squares {
 	display: flex;
 	flex-wrap: wrap;
-	width: 10%;
-	height: 10%;
+	/* width: 10%;
+	height: 10%; */
 	background-color: #123444;
 	justify-content: center;
 }
 
 .squares div {
-/*	margin-top: 5%;
-	margin-bottom: 5%;*/
-	margin-left: 50%;
-	width: 80px;
+	justify-content: right;
+	/* margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: 50%; */
+	width: 280px;
 	height: 80px;
-}
+} */
