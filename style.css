@@ -1,27 +1,40 @@
-/* html {
-	background-color: black;
+html {
+	background-color: grey;
 	height: 100%;
 }
 
 body {
     min-height: 100%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+	/* box-shadow: 100px; */
 }
 
+.menu {
+	display: flex;
+	align-items: flex-end;
+    justify-content: flex-end;
+	margin-bottom: 800px;
+}
 
 .squares {
+	aspect-ratio: 1 / 1;
 	display: flex;
 	flex-wrap: wrap;
-	/* width: 10%;
-	height: 10%; */
-	background-color: #123444;
-	justify-content: center;
+	width: 512px;
+	height: 512px;
+	box-sizing: border-box;
+	/* transform: scale(var(--scale)); */
 }
 
-.squares div {
-	justify-content: right;
-	/* margin-top: 5%;
-	margin-bottom: 5%;
-	margin-left: 50%; */
-	width: 280px;
-	height: 80px;
+/* .squares > * {
+	transform: scale(calc(1*var(--scale)));
 } */
+
+.squares div {
+	width: 32px;
+	height: 32px;
+	background-color: white;
+}
