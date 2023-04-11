@@ -1,6 +1,7 @@
 html {
 	background-color: grey;
 	height: 100%;
+	max-height: 100%;
 }
 
 body {
@@ -19,13 +20,24 @@ body {
 	margin-bottom: 800px;
 }
 
+/* .squares {
+	display: grid;
+	width: 600px;
+	height: 600px;
+} */
+
 .squares {
+	padding: 1rem;
 	aspect-ratio: 1 / 1;
-	display: flex;
-	flex-wrap: wrap;
-	width: 512px;
-	height: 512px;
-	box-sizing: border-box;
+	justify-content: center;
+	display: grid;
+	position: relative;
+	/* grid-template-columns: repeat(8, auto);
+	grid-template-rows: repeat(8, auto); */
+	max-width: 640px;
+	max-height: 640px;
+	box-sizing: border-box; 
+	overflow: hidden;
 	/* transform: scale(var(--scale)); */
 }
 
@@ -34,7 +46,26 @@ body {
 } */
 
 .squares div {
-	width: 32px;
-	height: 32px;
+	/* overflow-x: hidden; */
+	width: calc(600px / 16 - 1px);
+	height: calc(600px / 16 - 1px);
 	background-color: white;
+	box-sizing: border-box;
+}
+
+/* #mousehover {
+	margin: auto;
+	max-width: 200px;
+	max-height: 200px;
+} */
+
+
+/* .grid {
+	max-width: 32px;
+	max-height: 32px;
+}
+
+#mousehover {
+	max-width: 512px;
+	max-height: 512px;
 }

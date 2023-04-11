@@ -1,28 +1,27 @@
 const mouseHover = document.getElementById("mouseHover");
 const sizeButton = document.querySelector("#size");
 
-const createGrid = (n) => {
+function createGrid(size) {
   const squaresContainer = document.querySelector('.squares');
-  for (let i = 0; i < n * n; i++) {
-    squaresContainer.appendChild(
-      Object.assign(
-        document.createElement('div'),
-        mouseHover.appendChild(squaresContainer)))
-        squaresContainer.addEventListener('mouseover', function(event) {
-          event.target.style.backgroundColor = "black"
-        }
-      )
+  squaresContainer.innerHTML = '';
+  if (isNaN(size) || size < 1 || size > 100) {
+    size = 16;
   }
+  for (let i = 0; i < size * size; i++) {
+    const square = document.createElement('div');
+    square.setAttribute('class', 'grid');
+    square.addEventListener('mouseover', function(event) {
+      event.target.style.backgroundColor = "black";
+    });
+    squaresContainer.appendChild(square);
+  }
+  squaresContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  squaresContainer.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 }
 
+sizeButton.addEventListener("click", function() {
+  const size = prompt("Please enter grid size (1-100)");
+  createGrid(size);
+});
 
-function gridSize() {
-  const size = prompt("Please enter grid size");
-  createGrid(size)
-}
-
-sizeButton.addEventListener("click", gridSize);
-
-// n = 16
-
-createGrid(16);
+createGrid();
